@@ -679,14 +679,8 @@ export default class ImageGallery extends React.Component {
     // adjust zIndex so that only the current slide and the slide were going
     // to is at the top layer, this prevents transitions from flying in the
     // background when swiping before the first slide or beyond the last slide
-    let zIndex = 1;
-    if (index === currentIndex) {
-      zIndex = 3;
-    } else if (index === this.state.previousIndex) {
-      zIndex = 2;
-    } else if (index === 0 || index === totalSlides) {
-      zIndex = 0;
-    }
+
+    const opacity = index === currentIndex || index === this.state.previousIndex ? 1 : 0;
 
     if (infinite && items.length > 2) {
       if (currentIndex === 0 && index === totalSlides) {
@@ -711,7 +705,7 @@ export default class ImageGallery extends React.Component {
       msTransform: translate3d,
       OTransform: translate3d,
       transform: translate3d,
-      zIndex: zIndex
+      opacity
     };
   }
 

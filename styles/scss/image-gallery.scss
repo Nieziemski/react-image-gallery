@@ -27,7 +27,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
     right: 0;
     top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 5000;
 
     .image-gallery-content {
       top: 50%;
@@ -75,7 +75,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
   cursor: pointer;
   outline: none;
   position: absolute;
-  z-index: 4;
+  z-index: 40000;
 
   &::before {
     @extend %ion;
@@ -239,7 +239,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
   position: absolute;
   right: 0;
   width: 80%;
-  z-index: 4;
+  z-index: 40000;
 
   .image-gallery-bullets-container {
     margin: 0;
@@ -380,7 +380,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 4;
+  z-index: 40000;
 
   @media(max-width: $ig-screen-sm-min) {
     font-size: .8em;
